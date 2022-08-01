@@ -7,20 +7,26 @@
     <title>John Rugh: Portfolio</title>
 
     <style>
+        :root {
+            --main-bg-color: green;
+            --main-border-color: tomato;
+        }
         .container {
             width: 100%;
             display: flex;
             justify-content: center;
             height: 400px;
             align-items: center;
+            
         }
         .container > div {
             width: 25%;
-            background-color: #676766;
+            background-color: var(--main-bg-color);
             height: 150px;
             margin: 10px;
             padding: 10px 0px;
             text-align: center;
+            border: 5px solid var(--main-border-color);
         }
 
         .col {
@@ -34,11 +40,33 @@
 
         .col > div {
             width: 25%;
-            background-color: #676766;
+            background-color: var(--main-bg-color);
             height: 150px;
             margin: 10px;
             padding: 10px 0px;
             text-align: center;
+        }
+
+        .subcontainer:hover {
+            border: 5px solid;
+            border-color: #00ff77;
+            color: white;
+        }
+
+        .subcontainer::first-letter {
+            color: white;
+            font-family: cursive;
+        }
+
+        h1[data-secret]:hover::after {
+            content: attr(data-secret);
+            margin-top: 10px;
+            color: violet;
+        }
+
+        div[src*="test"] {
+            border: 5px solid black;
+
         }
 
 
@@ -46,7 +74,7 @@
 </head>
 <body>
 <div>
-    <h1>comming soon</h1>
+    <h1>flexbox</h1>
 
     <div class="container">
         <div class="one">One</div>
@@ -61,6 +89,30 @@
         <div class="three">Three</div>
         <div class="four">Four</div>
     </div>
+</div>
+
+<div>
+    <h1 data-secret="my secret message">pseudo class</h1>
+
+    <div class="container">
+        <div class="one subcontainer">One</div>
+        <div class="two subcontainer">Two</div>
+        <div class="three subcontainer">Three</div>
+        <div class="four subcontainer">Four</div>
+    </div>
+
+</div>
+
+<div>
+    <h1>css variables and selecotrs</h1>
+
+    <div class="container">
+        <div class="one" src="test">One</div>
+        <div class="two">Two</div>
+        <div class="three" src="test">Three</div>
+        <div class="four">Four</div>
+    </div>
+
 </div>
     
     
