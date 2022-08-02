@@ -1,7 +1,9 @@
+/* univesal selector */
 * {
   box-sizing: border-box;
 }
 
+/* element selectors */
 body {
   font-family: Arial;
   margin: 0;
@@ -16,7 +18,7 @@ header {
 
 /* 
 What happens when we set the display property to flex? 
-TODO: Write your answer here 
+changing the display to flex initiates the flexbox module and causes all of the children of this item to become flex items
 */
 nav {
   display: flex;
@@ -32,7 +34,7 @@ nav a {
 
 /* 
 What is the flex-wrap property? 
-TODO: Write your answer here 
+TODO: The flex-wrap property tells the browser to drop any content that will not fit on the current row to the row directly beneath it
 */
 main {
   display: flex;
@@ -56,7 +58,7 @@ footer {
 
 /* 
 What does the justify-content property do? 
-TODO: Write your answer here 
+The justify-content property changes the layout of the flex items on the main axis
 */
 .products {
   flex: 4;
@@ -70,7 +72,7 @@ TODO: Write your answer here
 /* 
 What is the flex property a shorthand property for?
 What is it doing here? 
-TODO: Write your answer here 
+The flex property is shorthand for flex-grow, flex-shrink and flex-basis. Here flex is indicating that each card should be absoultely 400px all of the time
 */
 .card {
   border-style: solid;
@@ -95,7 +97,7 @@ TODO: Write your answer here
 /* 
 What does the flex-direction property define?
 What is it doing here? 
-TODO: Write your answer here 
+Flex-direction changes the main axis of the flex container. The nav item below has had the axis changed to the column being the main axis 
 */
 @media screen and (max-width: 768px) {
   main,
