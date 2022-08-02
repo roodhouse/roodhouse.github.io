@@ -5,6 +5,7 @@
 body {
   font-family: Arial;
   margin: 0;
+  
 }
 
 header {
@@ -19,7 +20,7 @@ header {
   border-width: 1px;
   padding: 10px;
   float: left;
-  width: 25%;
+  width: 100%;
 }
 
 .card header {
@@ -36,4 +37,56 @@ header {
 
 /* TODO: Use media query to change the width of the cards so they split into two columns at 992px or smaller*/
 
+/* @media screen and (max-width: 992px) {
+  
+  header {
+    background: tomato;
+  }
+
+
+  .card {
+    width: 50%;
+  }
+} */
+
 /* TODO: Use media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+
+/* @media only screen and (max-width: 768px) {
+  
+  header {
+    background: thistle;
+    font-weight: bolder;
+    
+  }
+
+  .card {
+    width: 100%;
+  }
+} */
+
+
+@media only screen and (min-width: 768px) {
+  
+  header {
+    background: thistle;
+    font-weight: bolder;
+    
+  }
+
+  .card {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  
+  header {
+    background: tomato;
+  }
+
+
+  .card {
+    width: 25%;
+  }
+}
+
