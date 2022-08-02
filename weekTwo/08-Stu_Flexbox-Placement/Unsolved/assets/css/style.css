@@ -43,6 +43,7 @@ footer {
   display: flex;
   width: 90%;
   margin: 1% auto;
+  /* align-items: flex-start; */
 }
 
 .product button {
@@ -74,7 +75,6 @@ footer {
   .product-slideshow button {
     /* Removes the slideshow buttons from the document flow */
     display: none;
-    align-items: center;
   }
 
   .product-details {
