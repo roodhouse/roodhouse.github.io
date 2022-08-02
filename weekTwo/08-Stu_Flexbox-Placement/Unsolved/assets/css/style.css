@@ -21,6 +21,7 @@ header {
 nav {
   display: flex;
   background-color: #d8a47f;
+  justify-content: end;
 }
 
 nav a {
@@ -46,10 +47,12 @@ footer {
 
 .product button {
   font-size: 150%;
+  
 }
 
 .product-slideshow {
   display: flex;
+  align-items: center;
 }
 
 .product-image {
@@ -71,6 +74,7 @@ footer {
   .product-slideshow button {
     /* Removes the slideshow buttons from the document flow */
     display: none;
+    align-items: center;
   }
 
   .product-details {
