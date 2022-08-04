@@ -61,6 +61,35 @@ article p {
 
 /* TODO: Style the term/phrase - underline, black text, grab cursor */
 
+.para {
+  position: relative;
+}
+
+.meat {
+  text-decoration: underline;
+  color: red;
+}
+
+.meat:hover {
+  cursor: grab;
+}
+
+.meat:hover::after {
+  content: "the flesh of an animal";
+  text-align: underline;
+  color: blue;
+  position: absolute;
+  left: 35%;
+  top: -20%;
+  background-color: red;
+  padding: 10px;
+  
+}
+
+span[data-descr] {
+  font-size: initial;
+}
+
 /* TODO: Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
 
 aside {
