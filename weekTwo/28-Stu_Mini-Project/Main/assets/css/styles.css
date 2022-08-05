@@ -10,24 +10,27 @@ body {
     font-size: 16px;
     background-color: var(--dark);
     color: var(--light);
-    margin: 20px;
+    margin: 0 1.3em;
 }
 
 header {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
 .page-title {
     color: var(--main);
-    width: 50%;
     margin: auto;
-    padding: 30px 0 30px 0px;
+    padding: .75em 0 .50em 0px;
     font-size: 2.5em;
+    text-align: center;
 }
 
 header p {
     line-height: 24px;
     text-align: center;
+    margin: 0px 3.3em 3.3em 3.3em;
 }
 
 section {
@@ -36,15 +39,27 @@ section {
 }
 
 .card-column {
-    margin: 10px;
+    display: flex;
+    width: 100%;
     max-width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 .code-card {
-    border: 2px dashed var(--light);
-    padding: 20px;
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 100%;
+    padding: 1.3em;
+    margin-bottom: 3em;
+    justify-content: flex-start;
+    outline: 2px dashed var(--light);
+    outline-offset: -2px;
+    transition: all .5s ease-in-out;
     
+}
+
+.code-card:hover, .code-card:hover .card-header {
+box-shadow: inset 0em 0em 8px var(--main), 0 0 15px var(--main);
 }
 
 .card-header {
@@ -55,7 +70,9 @@ section {
     padding: 10px;
     background: var(--dark);
     position: relative;
-    top: -50px;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    transition: all .5s ease-in-out;
 }
 
 .card-column figure p {
@@ -64,5 +81,52 @@ section {
 }
 
 .code-block {
-    background-image: linear-gradient(67deg, var(--dark), var(--main));
+    background-image: linear-gradient(178deg, var(--dark), var(--main));
+    font-family: monospace;
+    line-height: 1.8;
+    letter-spacing: .1em;
+    border-radius: 0.5em;
+    padding: 0.625em;
+}
+
+.code-card pre {
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer h3 {
+    font-size: 1.5em;
+    color: var(--main);
+}
+
+/* responsive */
+
+@media screen and (min-width: 786px) {
+    .card-column {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0em 1.3em 0em 1.3em;
+    }
+
+    .card-column figure.code-card pre.code-block {
+        height: 85%;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .card-column {
+        max-width: 33%;
+    }   
+
+    .code-card {
+        width: 100%;
+    }
 }
