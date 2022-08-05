@@ -1,6 +1,8 @@
 :root {
   --dark: #13293d;
   --light: #fff;
+  --tan : tan;
+  --b-color: #aaaaaa;
   --border-radius: 50px;
 }
 
@@ -31,11 +33,11 @@ header {
 
 nav {
   display: flex;
-  background-color: #d8a47f;
+  background-color: var(--tan);
 }
 
 nav a {
-  color: #13293d;
+  color: var(--dark);
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;
@@ -76,7 +78,7 @@ footer {
   padding: 10px;
   flex: 0 0 300px;
   transform: rotate(8deg);
-  box-shadow: 10px 10px 5px #aaaaaa;
+  box-shadow: 10px 10px 5px var(--b-color);
   margin: 20px;
 }
 
