@@ -79,7 +79,7 @@
     margin: 0 auto 5px auto;
     /* height: 500px;
     max-height: 60%; */
-    border-radius: 0% 0% 150% 150%;
+    /* border-radius: 0% 0% 150% 150%; */
     max-width: 100%;
   }
   
@@ -93,7 +93,7 @@
   form {
     /* Center the form on the page */
     margin: 0 auto;
-    width: 52%;
+    width: 100%;
     padding: 10px;
     border: 5px solid #6F7DAF;
     border-radius: 20px;
@@ -136,14 +136,18 @@
   
   /* header */
 
-  header nav ul {
+  header nav ul, footer nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
   
-header nav ul li {
+header nav ul li, footer nav ul li {
     margin-top: 16px;
+}
+
+footer nav ul li {
+    margin-bottom: 16px;
 }
 
 hr {
@@ -177,6 +181,25 @@ hr {
 }
 
 .code-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero img {
+    border-radius: 0% 0% 150% 150%;
+}
+
+#contact h2 {
+    margin-top: 0px;
+}
+
+#name {
+    margin-bottom: 10px;
+}
+
+
+#contact .moreLinks ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
