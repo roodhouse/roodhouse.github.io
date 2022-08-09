@@ -42,7 +42,7 @@
   
   header,
   footer {
-    height: 10%;
+    /* height: 60px; */
     width: 100%;
     line-height: 55px;
     background-color: #6F7DAF;
@@ -71,6 +71,7 @@
     height: 500px;
     max-height: 25%;
     border-radius: 0% 0% 150% 150%;
+    max-width: 100%;
   }
   
   section {
@@ -83,7 +84,7 @@
   form {
     /* Center the form on the page */
     margin: 0 auto;
-    width: 500px;
+    width: 52%;
     padding: 10px;
     border: 5px solid #6F7DAF;
     border-radius: 20px;
@@ -123,11 +124,11 @@
   }
    
   /* Class Selectors */
-  .text-center {
+  .text-center, .text-align {
     text-align: center;
   }
   
-  .text-right {
+  /* .text-right {
     text-align: right;
-  }
+  } */
   
