@@ -4,8 +4,8 @@ var c = 100;
 var d = c % b; // 0
 var e = c / 2; // 50 number
 
-var expression1 = (b === e);
-var expression2 = (e < d);
+var expression1 = (b === e); // true
+var expression2 = (e < d); // false
 
 // Use comparison operators so all expressions below log to the console as true
 console.log(a == b); // solution on left, original on right console.log(a === b);
