@@ -16,11 +16,20 @@
     color: #4F4846;
   }
   
-  h1,
-  h2 {
+  h1, h2, h3 {
     margin: 20px 1% 20px 1%;
   }
+
   
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+
   main {
     padding: 60px 0;
   }
@@ -42,9 +51,9 @@
   
   header,
   footer {
-    /* height: 60px; */
+    height: 60px;
     width: 100%;
-    line-height: 55px;
+    /* line-height: 55px; */
     background-color: #6F7DAF;
   }
   
@@ -68,15 +77,15 @@
   img {
     display: block;
     margin: 0 auto 5px auto;
-    height: 500px;
-    max-height: 25%;
+    /* height: 500px;
+    max-height: 60%; */
     border-radius: 0% 0% 150% 150%;
     max-width: 100%;
   }
   
   section {
     margin-bottom: 0;
-    padding: 20px 10px 40px 10px;
+    padding: 0px 10px 20px 10px;
     border-top: 3px solid #D4E1FB;
     background-color:  #D4E1FB;
   }
@@ -124,6 +133,27 @@
   }
    
   /* Class Selectors */
+  
+  /* header */
+
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+header nav ul li {
+    margin-top: 16px;
+}
+
+hr {
+    width: 100%;
+    border: 2px solid white;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 0px 0px 25px grey;
+}
   .text-center, .text-align {
     text-align: center;
   }
@@ -131,4 +161,23 @@
   /* .text-right {
     text-align: right;
   } */
+
+#about, #work, #contact {
+    width: 100%;
+}
   
+
+#about p {
+    line-height: 24px;
+    text-align: center;
+}
+
+.card-row a {
+    color: #4F4846;
+}
+
+.code-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
