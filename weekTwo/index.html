@@ -1,152 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Uchen&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-  <title>John Rugh Landing Page</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Uchen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>John Rugh Landing Page</title>
+  </head>
 
-<body>
-  <header>
-    <!-- top navigation  -->
-    <nav class="text-align">
-      <ul>
-        <li> <a href="https://roodhouse.github.io" target="_blank">Home</a></li>
-        <li> <a href="https://roodhouse.github.io/portfolio.html" target="_blank">Portfolio</a></li>
-        <li> <a href="#about">About</a></li>
-        <li> <a href="#work">Work</a></li>
-        <li> <a href="#contact">Contact</a></li>
-      </ul>
-    </nav> 
-    <!-- end top nav -->
-  </header>
-
-  <main>
-
-    <!-- hero section -->
-    <div class="hero">
-        <h1 class="text-center">John Rugh</h1>
-        <figure>
-        <img src="./assets/images/me.jpg" alt="This is an image of John">
-        <!-- <figcaption class="text-center">John Rugh of Austin Texas.</figcaption>  removed caption-->
-        </figure>
-    </div>
-    <!-- end hero -->
-
-    <!-- about section -->
-    <section id="about">
-      <h2 class="text-center">About</h2>
-        
-        <p>John has been married to Laura Rugh for 14 years. John and Laura have 4 daughters ages 18 months to 11 years. The Rugh's have 2 Golden Doodles, Bo & Arrow. John has lived in central Texas for 2 decades.</p>
-        
-    </section>
-
-    <!-- Work section -->
-    <section id="work">
-        <h2 class="text-center">Work</h2>
-        <section id="work-cards">
-          <!-- Color Wheel card -->
-          <div class="card-row">
-              <a href="https://www.rughdesign.com/color-wheel" target="_blank">
-                  <figure class="card code-card">
-                      <img src="./assets/images/color-wheel-icon.svg" width="100%" alt="The Color Wheel">
-                      <h3 class="card-header">Color Wheel</h3>
-                      <hr>
-                  </figure>
-              </a>
-          </div>
-
-          <!-- Cheetsheet card -->
-          <div class="card-row">
-              <a href="https://roodhouse.github.io/cheatsheet.html" target="_blank">
-                  <figure class="card code-card">
-                      <img src="./assets/images/cheatsheet.png" alt="The Color Wheel">
-                      <h3 class="card-header">CSS Cheatsheet</h3>
-                      <hr>
-                  </figure>
-              </a>
-          </div>
-
-          <!-- Awesome Sauce card -->
-          <div class="card-row">
-              <a href="http://tiffzhang.com/startup/index.html?s=589745255554" target="_blank">
-                  <figure class="card code-card code-card-margin">
-                      <img src="./assets/images/awesomeSauce.jpg" alt="The Color Wheel">
-                      <h3 class="card-header">Awesome Sauce</h3>
-                      <hr>
-                  </figure>
-              </a>
-          </div>
-
-          <!-- Freedom card -->
-          <div class="card-row">
-              <a href="http://tiffzhang.com/startup/index.html?s=749443416997" target="_blank">
-                  <figure class="card code-card code-card-margin">
-                      <img src="./assets/images/freedomsCost.jpg" alt="The Color Wheel">
-                      <h3 class="card-header">Freedom isnt Free</h3>
-                      <hr>
-                  </figure>
-              </a>
-          </div>
-        </section>
-        <!-- <ul>
-            <li> <a href="https://roodhouse.github.io/cheatsheet.html" target="_blank">Cheatsheet</a></li> moved here temp
-            <li>
-                <figure>
-                    <img src="./assets/images/color-wheel-icon.svg" alt="The Color Wheel">
-                    <figcaption>The Color Wheel</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <img src="" alt="Bootcamp css cheatsheet">
-                    <figcaption>CSS Cheatsheet</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <img src="" alt="Awesome Sauce">
-                    <figcaption>Awesome Sauce</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <img src="" alt="Freedom aint free">
-                    <figcaption>Freedom</figcaption>
-                </figure>
-            </li>
-          </ul> -->
-      </section>
-
-      <!-- Contact section -->
-    <section id="contact">
-        <h2 class="text-center">Contact Me</h2>
-        <form>
-          <ul>
-            <!-- <li> <a href="https://roodhouse.github.io/" target="_blank">Github</a></li> moved this here temp -->
-            <li>
-              <label class="text-align" for="name">Name:</label>
-              <input type="text" id="name" name="user-name">
-            </li>
-            <li>
-              <label class="text-align" for="email">Email:</label>
-              <input type="text" id="email" name="user-email">
-            </li>
-          </ul>
-          <div class="text-center">
-            <button type="submit">SEND</button>
-          </div>
-        </form>
-      </section>
-  </main>
-
-  <footer class="text-center">
-    <nav class="text-right">
+  <body>
+    <header>
+      <!-- top navigation  -->
+      <nav class="text-align">
         <ul>
           <li> <a href="https://roodhouse.github.io" target="_blank">Home</a></li>
           <li> <a href="https://roodhouse.github.io/portfolio.html" target="_blank">Portfolio</a></li>
@@ -155,8 +23,114 @@
           <li> <a href="#contact">Contact</a></li>
         </ul>
       </nav> 
-    <!-- <div>© 2022 roodhouse </div> -->
-  </footer>
-    
-</body>
+      <!-- end top nav -->
+    </header>
+
+    <main>
+
+      <!-- hero section -->
+      <div class="hero">
+          <h1 class="text-center">John Rugh</h1>
+          <figure>
+          <img src="./assets/images/me.jpg" alt="This is an image of John">
+          <!-- <figcaption class="text-center">John Rugh of Austin Texas.</figcaption>  removed caption-->
+          </figure>
+      </div>
+      <!-- end hero -->
+
+      <!-- about section -->
+      <section id="about">
+        <h2 class="text-center">About</h2>
+          
+          <p>John has been married to Laura Rugh for 14 years. John and Laura have 4 daughters ages 18 months to 11 years. The Rugh's have 2 Golden Doodles, Bo & Arrow. John has lived in central Texas for 2 decades.</p>
+          
+      </section>
+
+      <!-- Work section -->
+      <section id="work">
+          <h2 class="text-center">Work</h2>
+          <section id="work-cards">
+            <!-- Color Wheel card -->
+            <div class="card-row">
+                <a href="https://www.rughdesign.com/color-wheel" target="_blank">
+                    <figure class="card code-card">
+                        <img src="./assets/images/color-wheel-icon.svg" width="100%" alt="The Color Wheel">
+                        <h3 class="card-header">Color Wheel</h3>
+                        <hr>
+                    </figure>
+                </a>
+            </div>
+
+            <!-- Cheetsheet card -->
+            <div class="card-row">
+                <a href="https://roodhouse.github.io/cheatsheet.html" target="_blank">
+                    <figure class="card code-card">
+                        <img src="./assets/images/cheatsheet.png" alt="The Color Wheel">
+                        <h3 class="card-header">CSS Cheatsheet</h3>
+                        <hr>
+                    </figure>
+                </a>
+            </div>
+
+            <!-- Awesome Sauce card -->
+            <div class="card-row">
+                <a href="http://tiffzhang.com/startup/index.html?s=589745255554" target="_blank">
+                    <figure class="card code-card code-card-margin">
+                        <img src="./assets/images/awesomeSauce.jpg" alt="The Color Wheel">
+                        <h3 class="card-header">Awesome Sauce</h3>
+                        <hr>
+                    </figure>
+                </a>
+            </div>
+
+            <!-- Freedom card -->
+            <div class="card-row">
+                <a href="http://tiffzhang.com/startup/index.html?s=749443416997" target="_blank">
+                    <figure class="card code-card code-card-margin">
+                        <img src="./assets/images/freedomsCost.jpg" alt="The Color Wheel">
+                        <h3 class="card-header">Freedom</h3>
+                        <hr>
+                    </figure>
+                </a>
+            </div>
+            
+          </section>
+        </section>
+
+        <!-- Contact section -->
+      <section id="contact">
+          <h2 class="text-center">Contact Me</h2>
+          <form>
+            <ul>
+              <!-- <li> <a href="https://roodhouse.github.io/" target="_blank">Github</a></li> moved this here temp -->
+              <li>
+                <label class="text-align form-label" for="name">Name:</label>
+                <input type="text" id="name" name="user-name" placeholder="name">
+              </li>
+              <li>
+                <label class="text-align form-label" for="email">Email:</label>
+                <input type="text" id="email" name="user-email" placeholder="email">
+              </li>
+            </ul>
+            <div class="text-center">
+              <button type="submit">SEND</button>
+            </div>
+          </form>
+        </section>
+    </main>
+
+    <footer class="text-center">
+      <nav class="text-right">
+          <ul>
+            <li> <a href="https://roodhouse.github.io" target="_blank">Home</a></li>
+            <li> <a href="https://roodhouse.github.io/portfolio.html" target="_blank">Portfolio</a></li>
+            <li> <a href="#about">About</a></li>
+            <li> <a href="#work">Work</a></li>
+            <li> <a href="#contact">Contact</a></li>
+          </ul>
+        </nav> 
+      <!-- <div>© 2022 roodhouse </div> -->
+    </footer>
+      
+  </body>
 </html>

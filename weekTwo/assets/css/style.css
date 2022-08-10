@@ -19,7 +19,6 @@
     font-size: 100%;
   }
   body {
-    position: relative;
     font-family: "Uchen", "Roboto", sans-serif;
     background-color: var(--tertiary);
     color: var(--textOne);
@@ -40,7 +39,7 @@
   }
 
   main {
-    padding: 60px 0;
+    padding: 60px 0 0 0;
   }
   
   li {
@@ -72,9 +71,7 @@
   }
   
   footer {
-    position: absolute;
     margin-top: 0;
-    bottom: 0;
     border-bottom: 10px solid var(--dark);
     color: var(--tertiary);    
   }
@@ -217,8 +214,6 @@ hr {
     text-align: center;
 }
 
-
-
 #contact h2 {
     margin-top: 0px;
 }
@@ -319,4 +314,128 @@ hr {
     footer a {
         color: var(--dark);
     }
+}
+
+@media screen and (min-width: 992px) {
+
+  #work-cards .card-row a .code-card .card-header, #work-cards .card-row a .code-card hr {
+    padding: 0 25% 0 25%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  
+  /* navigation */
+
+  header nav ul {
+    justify-content: end;
+  }
+
+  /* main content */
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+/* hero section */
+  .hero {
+    order: 1;
+  }
+
+  /* work section */
+
+  #work {
+    order: 2;
+  }
+
+  #work-cards {
+    align-items: initial;
+  }
+
+  .card-row {
+    flex: 0 0 25%;
+  }
+
+  .code-card {
+    padding: 0 5px 0 5px;
+  }
+
+  #work-cards .card-row a .code-card .card-header, #work-cards .card-row a .code-card hr {
+    padding: 0 5% 0 5%;
+
+  }
+
+  h1 {
+    font-size: 4em;
+    margin: 50px 1% 50px 1%;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  section h2, #contact h2 {
+    margin: 25px 1% 25px 1%;
+    padding-bottom: 20px;
+  }
+
+   /* contact and about row */
+   #contact, #about {
+    order: 3;
+    width: 50%;
+  }
+
+  #about p {
+    padding: 0 10% 0 10%;
+  }
+
+  #contact form {
+    background: var(--main);
+    padding: 0px;
+  }
+  .form-label {
+    display: none;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+  }
+
+  #contact form ul {
+    padding-bottom: 0px;
+  }
+
+  #contact form ul, #contact form .text-center {
+    width: 100%;
+  }
+
+
+
+  #contact form ul li {
+    padding: 0 25%;
+  }
+
+  #contact form ul li input {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    height: 30px;
+    border-radius: 20px;
+  }
+
+  #contact form ul li input::placeholder {
+    font-size: 1em;
+    color: var(--dark);
+    font-family: 'Uchen';
+}
 }
