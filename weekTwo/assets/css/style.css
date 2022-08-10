@@ -1,3 +1,12 @@
+:root {
+    --main:      #6F7DAF;
+    --secondary: #D4E1FB;
+    --tertiary:  #FDF8F5;
+    --textOne:   #4F4846;
+    --light:     #FFF;
+    --dark:      #000; 
+}
+
 /* Universal Selector */
 * {
     margin:0;
@@ -12,8 +21,8 @@
   body {
     position: relative;
     font-family: "Uchen", "Roboto", sans-serif;
-    background-color: #FDF8F5;
-    color: #4F4846;
+    background-color: var(--tertiary);
+    color: var(--textOne);
   }
   
   h1, h2, h3 {
@@ -42,11 +51,11 @@
   
   a {
     text-decoration: none;
-    color: #FDF8F5;
+    color: var(--tertiary);
   }
   
   a:hover {
-    color: black;
+    color: var(--dark);
   }
   
   header,
@@ -54,20 +63,20 @@
     height: 60px;
     width: 100%;
     /* line-height: 55px; */
-    background-color: #6F7DAF;
+    background-color: var(--main);
   }
   
   header {
     position: fixed;
-    border-bottom: 10px solid #D4E1FB;
+    border-bottom: 10px solid var(--secondary);
   }
   
   footer {
     position: absolute;
     margin-top: 0;
     bottom: 0;
-    border-bottom: 10px solid black;
-    color: #FDF8F5;    
+    border-bottom: 10px solid var(--dark);
+    color: var(--tertiary);    
   }
   
   figure {
@@ -86,8 +95,8 @@
   section {
     margin-bottom: 0;
     padding: 0px 10px 20px 10px;
-    border-top: 3px solid #D4E1FB;
-    background-color:  #D4E1FB;
+    border-top: 3px solid var(--secondary);
+    background-color:  var(--secondary);
   }
   
   form {
@@ -95,7 +104,7 @@
     margin: 0 auto;
     width: 100%;
     padding: 10px;
-    border: 5px solid #6F7DAF;
+    border: 5px solid var(--main);
     border-radius: 20px;
   }
   
@@ -108,7 +117,7 @@
   textarea {
     box-sizing: border-box;
     width: 60%;
-    border: 1px solid black;
+    border: 1px solid var(--dark);
   }
   
   textarea {
@@ -119,17 +128,17 @@
   button {
     height: 40px;
     width: 25%;
-    background-color: #D4E1FB;
-    color: black;
+    background-color: var(--secondary);
+    color: var(--dark);
     margin-top: 10px;
-    border: 2px solid #6F7DAF;
+    border: 2px solid var(--main);
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #6f7daf;
-    color: white;
-    border: 2px solid white;
+    background-color: var(--main);
+    color: var(--light);
+    border: 2px solid var(--light);
   }
    
   /* Class Selectors */
@@ -152,7 +161,7 @@ footer nav ul li {
 
 hr {
     width: 100%;
-    border: 2px solid white;
+    border: 2px solid var(--light);
     margin-left: 25%;
     margin-right: 25%;
     border-radius: 25px 25px 25px 25px;
@@ -181,7 +190,7 @@ hr {
 }
 
 .card-row a {
-    color: #4F4846;
+    color: var(--textOne);
 }
 
 .code-card {
@@ -231,14 +240,83 @@ hr {
 
 
     /* navbar */
-    header nav ul, footer nav ul {
+    /* header nav ul, footer nav ul {
         justify-content: end;
+    } */
+
+    /* hero section */
+    .hero figure img {
+        max-width: 50%;
+    }
+
+    /* about section */
+
+    #about, #contact {
+        background-color: var(--main);
+        color: var(--tertiary);
     }
 
     /* work section */
+
+    section {
+        border-top: none;
+    }
+
+    section h2 {
+        padding-top: 20px;
+        margin-top: 0px;
+    }
     .card-row {
         flex: 0 0 50%;
         max-width: 50%;
         padding: 0em 1.3em 0em 1.3em;
+    }
+
+    #work-cards {
+        padding-bottom: 0px;
+    }
+
+    #work-cards .card-row a .code-card img {
+        width: 250px;
+        height: 250px;
+        margin-top: 12.11%;
+    }
+
+    #work-cards .card-row a .code-card hr {
+        margin-bottom: 12.11%;
+    }
+
+    .code-card {
+        border: 20px ridge var(--main);
+    }
+
+    .code-card-margin {
+        margin-bottom: 0px;
+    }
+
+    /* contact section */
+
+    #contact form {
+        background: var(--secondary);
+        padding: 2.5% 10px 2.5% 10px;
+    }
+
+    #contact form ul {
+        color: var(--dark);
+        padding-bottom: 2.5%;
+    }
+
+    button {
+        margin-top: 0px;
+    }
+
+    /* footer */
+    
+    footer {
+        background-color: var(--secondary);
+    }
+
+    footer a {
+        color: var(--dark);
     }
 }
