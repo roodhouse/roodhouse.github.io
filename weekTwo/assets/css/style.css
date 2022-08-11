@@ -290,49 +290,6 @@ hr {
         margin-bottom: 0px;
     }
 
-    /* color wheel card */
-    .color-wheel {
-      position: relative;
-      top: -15px;
-      left: 50px;
-      z-index: 20;
-    }
-  
-    .color-wheel a {
-      display: inline-block;
-      vertical-align: middle;
-      -webkit-transform: scale(1.3) rotate(4deg);
-      transform: scale(1.3) rotate(4deg);
-      box-shadow: 0 0 1px rgb(0, 0, 0 / 0%);
-      transition-duration: .3s;
-      transition-property: transform;
-      
-    }
-
-    /* cheatsheet card */
-
-    .hvr-grow-rotate:hover {
-      -webkit-transform: scale(1.3) rotate(4deg);
-      transform: scale(1.3) rotate(4deg);
-      position: relative;
-      z-index: 22;
-    }
-
-    #freedom .hvr-grow-rotate:hover {
-      position: relative;
-      right: 50px;
-    }
-
-    #awesome .hvr-grow-rotate:hover, #freedom .hvr-grow-rotate:hover {
-      -webkit-transform: scale(1.3) rotate(-4deg);
-      transform: scale(1.3) rotate(-4deg);
-      z-index: 10;
-    }
-
-    .color-wheel a figure, .cheatsheet a figure, #awesome a figure, #freedom a figure {
-      background: var(--secondary);
-    }
-
     /* contact section */
 
     #contact form {
@@ -383,6 +340,24 @@ hr {
     justify-content: center;
   }
 
+  h1 {
+    font-size: 4em;
+    margin: 50px 1% 50px 1%;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  section h2, #contact h2 {
+    margin: 25px 1% 25px 1%;
+    padding-bottom: 20px;
+  }
+
 /* hero section */
   .hero {
     order: 1;
@@ -421,23 +396,43 @@ hr {
     padding: 0 5% 0 5%;
   }
 
-
-  h1 {
-    font-size: 4em;
-    margin: 50px 1% 50px 1%;
+  /* color wheel card */
+  .color-wheel {
+    position: relative;
+    top: -15px;
+    left: 50px;
+    z-index: 20;
   }
 
-  h2 {
-    font-size: 3em;
+  .color-wheel a {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: scale(1.3) rotate(4deg);
+    transform: scale(1.3) rotate(4deg);  
   }
 
-  h3 {
-    text-align: center;
+  /* rest of cards card */
+
+  .hvr-grow-rotate:hover {
+    -webkit-transform: scale(1.3) rotate(4deg);
+    transform: scale(1.3) rotate(4deg);
+    position: relative;
+    z-index: 22;
   }
 
-  section h2, #contact h2 {
-    margin: 25px 1% 25px 1%;
-    padding-bottom: 20px;
+  #freedom .hvr-grow-rotate:hover {
+    position: relative;
+    right: 50px;
+  }
+
+  #awesome .hvr-grow-rotate:hover, #freedom .hvr-grow-rotate:hover {
+    -webkit-transform: scale(1.3) rotate(-4deg);
+    transform: scale(1.3) rotate(-4deg);
+    z-index: 10;
+  }
+
+  .color-wheel a figure, .cheatsheet a figure, #awesome a figure, #freedom a figure {
+    background: var(--secondary);
   }
 
    /* contact and about row */
@@ -480,8 +475,6 @@ hr {
   #contact form ul, #contact form .text-center {
     width: 100%;
   }
-
-
 
   #contact form ul li {
     padding: 0 25%;
