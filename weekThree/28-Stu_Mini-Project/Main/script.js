@@ -1,61 +1,84 @@
-var wins = 0;
-var ties = 0;
-var losses = 0;
+// keep track of record... create var to keep track of win loss or tie
+// user choice as varablies
+// increment var 
+// Math.random
+// let myShows = ['Bones', 'Psych', 'Big Bang Theory', 'Mad Men', 
+// 'Breaking Bad', 'Modern Family', 'Game of Thrones', 'Dexter'];
 
-// Array of options for computer to pick from
-var options = ["R", "P", "S"];
+// let randomValue = myShows[Math.floor(Math.random() * myShows.length)];
+// console.log(randomValue);
 
-var playGame = function() {
-  // Ask user for their choice
-  var userChoice = window.prompt("Enter R, P, or S:");
 
-  // If user pressed Cancel, immediately end function
-  if (!userChoice) {
+
+
+
+
+
+var wins      = 0;
+var losses    = 0;
+var ties      = 0;
+var playerOne = ['r', 'p', 's'];
+
+var playGame  = function() {
+  var myPrompt = prompt("Welcome to our game of Rock Paper Scissors! Use " + playerOne[0] + " for Rock, " + playerOne[1] + " for paper or " + playerOne[2] + " for scissors.");
+
+  if(!myPrompt) {
     return;
   }
-
-  // Convert to uppercase to make comparisons easier
-  userChoice = userChoice.toUpperCase();
-
-  // Get random index from array of options
-  var index = Math.floor(Math.random() * options.length);
-  var computerChoice = options[index];
-
-  window.alert("The computer chose " + computerChoice);
-
-  // If choices are the same, it's a tie
-  if (userChoice === computerChoice) {
+      myPrompt   = myPrompt.toLowerCase();
+  var randomPick = playerOne[Math.floor(Math.random() * playerOne.length)];
+ 
+  if(randomPick === myPrompt) {
     ties++;
-    window.alert("It's a tie!");
-
-  // Check every win condition for the player
-  } else if (
-    (userChoice === "R" && computerChoice === "S") || 
-    (userChoice === "P" && computerChoice === "R") || 
-    (userChoice === "S" && computerChoice === "P")
+    alert("You tied with the computer"); 
+  } else if(
+    (myPrompt === 'r' && randomPick === 's' ) ||
+    (myPrompt === 'p' && randomPick === 'r' ) ||
+    (myPrompt === 's' && randomPick === 'p' )
   ) {
     wins++;
-    window.alert("You win!");
-
-  // If above conditions failed, assume player lost
+    alert("The computer chose " + randomPick + ", you win!");
   } else {
     losses++;
-    window.alert("You lost!");
+    alert("The computer chose " + randomPick + ", you lost!");
   }
+  alert('ties: ' + ties + '\nwins: ' + '\nlosses' + losses);
 
-  // Print stats with line breaks
-  window.alert(
-    "Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties
-  );
+  var playAgain = confirm("Do you want to play again?");
 
-  // Ask user to play again
-  var playAgain = window.confirm("Play again?");
-
-  // If user pressed OK, run the function again
-  if (playAgain) {
+  if(playAgain) {
     playGame();
   }
-};
+}
 
-// Run the game for the first time
 playGame();
+
+
+
+
+
+
+// if (myPrompt === 'R' || myPrompt === 'r') {
+//   var theResult = confirm("You picked " + myPrompt + " , thanks.");
+  
+// console.log(randomPick);
+//  var cpuPick    = confirm("The CPU picked " + randomPick + ", cool.")
+//   var tryAgain = alert("Try again");
+// } else if (myPrompt === 'P' || myPrompt === 'p') {
+//   var theResult = confirm("You picked " + myPrompt + " , thanks.");
+//   var tryAgain = alert("Try again");
+// } else if (myPrompt === 'S' || myPrompt === 's') {
+//   var theResult = confirm("You picked " + myPrompt + " , thanks.");
+//   var tryAgain = alert("Try again")
+// }
+
+// var randomPick = playerOne[Math.floor(Math.random() * playerOne.length)];
+// console.log(randomPick);
+
+
+
+// var myAlert = alert("Welcome to our game of Rock Paper Scissors! Use " + playerOne[0] + " for Rock, " + playerOne[1] + " for paper or " + playerOne[2] + " for scissors.");
+// console.log(myAlert);
+
+
+
