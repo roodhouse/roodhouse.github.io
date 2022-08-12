@@ -42,7 +42,7 @@ var playGame  = function() {
     losses++;
     alert("The computer chose " + randomPick + ", you lost!");
   }
-  alert('ties: ' + ties + '\nwins: ' + '\nlosses' + losses);
+  alert('ties: ' + ties + '\nwins: ' + wins + '\nlosses' + losses);
 
   var playAgain = confirm("Do you want to play again?");
 
