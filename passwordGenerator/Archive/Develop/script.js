@@ -318,31 +318,108 @@ function writePassword() {
     madeTheCut = madeTheCut.concat(mySpecialCharacterArray);
     console.log("made the cut " + madeTheCut);
 
-   // randomly select a character from the new madeTheCut array up to and equal to the number of characters user selected
+    // If user selects all types of characters 
+   
+    if (lowerCase == true && upperCase == true && numeric == true && specialCharacters == true) {
+      console.log("they are all true!");
+    
+    
+    // iterate over each variable until the password length has been reached
+    
+    var loopCharacterCount = [];
+    
+    
+    for(i = 0; i <= passwordLength; i++) {
 
-   var finalCharactersArray = [];
-   console.log("evidence of a new and empty final character array " + finalCharactersArray.length);
+      if (passwordLength !== loopCharacterCount.length ) {
+        var lowerLoop = myLowerLetterArray[Math.floor(Math.random() * myLowerLetterArray.length)];
+            loopCharacterCount.push(lowerLoop);
+          if (passwordLength !== loopCharacterCount.length) {
+            var upperLoop = myUpperLetterArray[Math.floor(Math.random() * myUpperLetterArray.length)];
+                loopCharacterCount.push(upperLoop);
+            if (passwordLength !== loopCharacterCount.length) {
+              var numericLoop = myNumericArray[Math.floor(Math.random() * myNumericArray.length)];
+                  loopCharacterCount.push(numericLoop);
+             if (passwordLength !== loopCharacterCount.length) {
+              var specialLoop = mySpecialCharacterArray[Math.floor(Math.random() * mySpecialCharacterArray.length)];
+        loopCharacterCount.push(specialLoop);
+            }
+          }
+      }
+    }
+    }
 
-   function randomFinalCharacters() {
-    var theCharacters = madeTheCut[Math.floor(Math.random() * passwordLength)]; // gives one character
-    finalCharactersArray.push(theCharacters);
-    console.log(finalCharactersArray);
+  } 
+  
+  // if lower upper numeric are true
+    else if (lowerCase == true && upperCase == true && numeric == true) { 
+      console.log("lower upper numeric are all true!");
+  
+  
+  // iterate over each variable until the password length has been reached
+  
+  var loopCharacterCount = [];
+  
+  
+  for(i = 0; i <= passwordLength; i++) {
 
-    return finalCharactersArray;
-   };
+    if (passwordLength !== loopCharacterCount.length ) {
+      var lowerLoop = myLowerLetterArray[Math.floor(Math.random() * myLowerLetterArray.length)];
+          loopCharacterCount.push(lowerLoop);
+        if (passwordLength !== loopCharacterCount.length) {
+          var upperLoop = myUpperLetterArray[Math.floor(Math.random() * myUpperLetterArray.length)];
+              loopCharacterCount.push(upperLoop);
+          if (passwordLength !== loopCharacterCount.length) {
+            var numericLoop = myNumericArray[Math.floor(Math.random() * myNumericArray.length)];
+                loopCharacterCount.push(numericLoop);
+        }
+    }
+  }
+  }
+};
+    // If lower upper special are true
+    
+  if (lowerCase == true && upperCase == true && specialCharacters == true) {
+    console.log("lower upper special are all true!");
 
-    var myFinalCharactersArray = randomFinalCharacters(); // array with all the characters letters 
 
-        console.log(myFinalCharactersArray.length);
+  // iterate over each variable until the password length has been reached
 
-        while (myFinalCharactersArray.length <= passwordLength-1) {
-          randomFinalCharacters();
-        };
+  var loopCharacterCount = [];
 
-        console.log("length after while loop: " + myFinalCharactersArray.length);
 
-       console.log("is this the final aaray? : " + myFinalCharactersArray);
-      return myFinalCharactersArray.join(' '); // returning the characters from the array as the password
+  for(i = 0; i <= passwordLength; i++) {
+
+    if (passwordLength !== loopCharacterCount.length ) {
+      var lowerLoop = myLowerLetterArray[Math.floor(Math.random() * myLowerLetterArray.length)];
+          loopCharacterCount.push(lowerLoop);
+        if (passwordLength !== loopCharacterCount.length) {
+          var upperLoop = myUpperLetterArray[Math.floor(Math.random() * myUpperLetterArray.length)];
+              loopCharacterCount.push(upperLoop);
+          if (passwordLength !== loopCharacterCount.length) {
+            var specialLoop = mySpecialCharacterArray[Math.floor(Math.random() * mySpecialCharacterArray.length)];
+      loopCharacterCount.push(specialLoop);
+        }
+    }
+  }
+  }
+};
+
+    console.log("before fisher loop: " + loopCharacterCount);
+    // Fisher-Yates shuffle function (used to shuffle the array)
+
+    var shuffleArray = function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i-- ) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    shuffleArray(loopCharacterCount);
+
+    console.log("after fisher loop: " + loopCharacterCount);
+   
+     return loopCharacterCount.join(' '); // returning the characters from the array as the password
   };
   var passwordText = document.querySelector("#password");
 
@@ -365,3 +442,25 @@ generateBtn.addEventListener("click", writePassword);
 // stuck in loop if don't answer correctly at one point
 
 // need to test each scenerio 
+
+// solution:
+// lower upper numeric special - done
+
+// lower upper numeric - done
+// lower upper special - done 
+// lower numeric special -- here
+// upper numeric special
+
+
+// lower upper
+// lower numeric
+// lower special
+// upper numeric
+// upper special
+// numeric special
+
+
+// lower
+// upper
+// numeric
+// special
