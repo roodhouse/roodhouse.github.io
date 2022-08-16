@@ -736,3 +736,8 @@ for(i = 0; i <= passwordLength; i++) {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// need to create site and do github stuff
+// refactor code above
+// readme explaining code 
