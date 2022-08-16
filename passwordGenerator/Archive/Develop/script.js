@@ -405,6 +405,271 @@ function writePassword() {
   }
 };
 
+// If lower numeric special are true
+   
+if (lowerCase == true && numeric == true && specialCharacters == true) {
+  console.log("lower numeric special are all true!");
+
+
+// iterate over each variable until the password length has been reached
+
+var loopCharacterCount = [];
+
+
+for(i = 0; i <= passwordLength; i++) {
+
+  if (passwordLength !== loopCharacterCount.length ) {
+    var lowerLoop = myLowerLetterArray[Math.floor(Math.random() * myLowerLetterArray.length)];
+        loopCharacterCount.push(lowerLoop);
+        if (passwordLength !== loopCharacterCount.length) {
+          var numericLoop = myNumericArray[Math.floor(Math.random() * myNumericArray.length)];
+              loopCharacterCount.push(numericLoop);
+         if (passwordLength !== loopCharacterCount.length) {
+          var specialLoop = mySpecialCharacterArray[Math.floor(Math.random() * mySpecialCharacterArray.length)];
+    loopCharacterCount.push(specialLoop);
+        }
+      }
+  }
+}
+};
+
+// If upper numeric special are true
+   
+if (upperCase == true && numeric == true && specialCharacters == true) {
+  console.log("they are all true!");
+
+// iterate over each variable until the password length has been reached
+
+var loopCharacterCount = [];
+
+for(i = 0; i <= passwordLength; i++) {
+
+      if (passwordLength !== loopCharacterCount.length) {
+        var upperLoop = myUpperLetterArray[Math.floor(Math.random() * myUpperLetterArray.length)];
+            loopCharacterCount.push(upperLoop);
+        if (passwordLength !== loopCharacterCount.length) {
+          var numericLoop = myNumericArray[Math.floor(Math.random() * myNumericArray.length)];
+              loopCharacterCount.push(numericLoop);
+         if (passwordLength !== loopCharacterCount.length) {
+          var specialLoop = mySpecialCharacterArray[Math.floor(Math.random() * mySpecialCharacterArray.length)];
+    loopCharacterCount.push(specialLoop);
+        }
+      }
+  }
+}
+};
+
+// If lower upper are true
+   
+if (lowerCase == true && upperCase == true) {
+  console.log("lower upper are true!");
+
+
+// iterate over each variable until the password length has been reached
+
+var loopCharacterCount = [];
+
+
+for(i = 0; i <= passwordLength; i++) {
+
+  if (passwordLength !== loopCharacterCount.length ) {
+    var lowerLoop = myLowerLetterArray[Math.floor(Math.random() * myLowerLetterArray.length)];
+        loopCharacterCount.push(lowerLoop);
+      if (passwordLength !== loopCharacterCount.length) {
+        var upperLoop = myUpperLetterArray[Math.floor(Math.random() * myUpperLetterArray.length)];
+            loopCharacterCount.push(upperLoop);
+          }
+        }
+      }
+    };
+
+    // If user selects lower numeric
+   
+    if (lowerCase == true && numeric == true) {
+      console.log("lower numeric are true!");
+    
+    
+    // iterate over each variable until the password length has been reached
+    
+    var loopCharacterCount = [];
+    
+    
+    for(i = 0; i <= passwordLength; i++) {
+
+    if (passwordLength !== loopCharacterCount.length ) {
+      var lowerLoop = myLowerLetterArray[Math.floor(Math.random() * myLowerLetterArray.length)];
+        loopCharacterCount.push(lowerLoop);
+          if (passwordLength !== loopCharacterCount.length) {
+            var numericLoop = myNumericArray[Math.floor(Math.random() * myNumericArray.length)];
+              loopCharacterCount.push(numericLoop);
+            }
+          }
+        }
+      };
+
+      // If user selects lower special
+   
+    if (lowerCase == true && specialCharacters == true) {
+      console.log("lower special are true!");
+    
+    
+    // iterate over each variable until the password length has been reached
+    
+    var loopCharacterCount = [];
+    
+    
+    for(i = 0; i <= passwordLength; i++) {
+
+      if (passwordLength !== loopCharacterCount.length ) {
+        var lowerLoop = myLowerLetterArray[Math.floor(Math.random() * myLowerLetterArray.length)];
+            loopCharacterCount.push(lowerLoop);
+             if (passwordLength !== loopCharacterCount.length) {
+              var specialLoop = mySpecialCharacterArray[Math.floor(Math.random() * mySpecialCharacterArray.length)];
+                loopCharacterCount.push(specialLoop);
+              }
+            }
+          }
+        };
+
+        // If user selects upper numeric
+   
+            if (upperCase == true && numeric == true) {
+              console.log("upper numeric are true!");
+
+              // iterate over each variable until the password length has been reached
+
+              var loopCharacterCount = [];
+
+              for(i = 0; i <= passwordLength; i++) {
+
+                if (passwordLength !== loopCharacterCount.length) {
+                  var upperLoop = myUpperLetterArray[Math.floor(Math.random() * myUpperLetterArray.length)];
+                  loopCharacterCount.push(upperLoop);
+                if (passwordLength !== loopCharacterCount.length) {
+                  var numericLoop = myNumericArray[Math.floor(Math.random() * myNumericArray.length)];
+                  loopCharacterCount.push(numericLoop);
+                }
+              }
+            }
+          }; // end myif
+
+        // If user selects upper special
+   
+        if (upperCase == true && specialCharacters == true) {
+          console.log("upper special are true!");
+
+          // iterate over each variable until the password length has been reached
+
+          var loopCharacterCount = [];
+
+          for(i = 0; i <= passwordLength; i++) {
+
+            if (passwordLength !== loopCharacterCount.length) {
+              var upperLoop = myUpperLetterArray[Math.floor(Math.random() * myUpperLetterArray.length)];
+              loopCharacterCount.push(upperLoop);
+            if (passwordLength !== loopCharacterCount.length) {
+              var specialLoop = mySpecialCharacterArray[Math.floor(Math.random() * mySpecialCharacterArray.length)];
+              loopCharacterCount.push(specialLoop);
+            }
+          }
+        }
+      }; // end myif
+
+        // If user selects numeric special
+   
+        if (numeric == true && specialCharacters == true) {
+          console.log("numeric special are true!");
+
+          // iterate over each variable until the password length has been reached
+
+          var loopCharacterCount = [];
+
+          for(i = 0; i <= passwordLength; i++) {
+
+            if (passwordLength !== loopCharacterCount.length) {
+              var numericLoop = myNumericArray[Math.floor(Math.random() * myNumericArray.length)];
+              loopCharacterCount.push(numericLoop);
+            if (passwordLength !== loopCharacterCount.length) {
+              var specialLoop = mySpecialCharacterArray[Math.floor(Math.random() * mySpecialCharacterArray.length)];
+              loopCharacterCount.push(specialLoop);
+            }
+          }
+        }
+      }; // end myif
+
+        // If user selects lower
+   
+        if (lowerCase == true) {
+          console.log("lower is true!");
+
+          // iterate over each variable until the password length has been reached
+
+          var loopCharacterCount = [];
+
+          for(i = 0; i <= passwordLength; i++) {
+
+            if (passwordLength !== loopCharacterCount.length ) {
+              var lowerLoop = myLowerLetterArray[Math.floor(Math.random() * myLowerLetterArray.length)];
+              loopCharacterCount.push(lowerLoop);
+            }
+          }
+        }; // end myif
+
+        // If user selects upper
+   
+        if (upperCase == true) {
+          console.log("upper is true!");
+
+          // iterate over each variable until the password length has been reached
+
+          var loopCharacterCount = [];
+
+          for(i = 0; i <= passwordLength; i++) {
+
+            if (passwordLength !== loopCharacterCount.length) {
+              var upperLoop = myUpperLetterArray[Math.floor(Math.random() * myUpperLetterArray.length)];
+              loopCharacterCount.push(upperLoop);
+            }
+          }
+        }; // end myif
+
+        // If user selects numeric
+   
+        if (numeric == true) {
+          console.log("numeric is true!");
+
+          // iterate over each variable until the password length has been reached
+
+          var loopCharacterCount = [];
+
+          for(i = 0; i <= passwordLength; i++) {
+
+            
+            if (passwordLength !== loopCharacterCount.length) {
+              var numericLoop = myNumericArray[Math.floor(Math.random() * myNumericArray.length)];
+              loopCharacterCount.push(numericLoop);
+            }
+          }
+        }; // end myif
+
+        // If user selects special
+   
+        if (specialCharacters == true) {
+          console.log("special is true!");
+
+          // iterate over each variable until the password length has been reached
+
+          var loopCharacterCount = [];
+
+          for(i = 0; i <= passwordLength; i++) {
+
+            if (passwordLength !== loopCharacterCount.length) {
+              var specialLoop = mySpecialCharacterArray[Math.floor(Math.random() * mySpecialCharacterArray.length)];
+              loopCharacterCount.push(specialLoop);
+            }
+          }
+        }; // end myif
+
     console.log("before fisher loop: " + loopCharacterCount);
     // Fisher-Yates shuffle function (used to shuffle the array)
 
@@ -448,19 +713,19 @@ generateBtn.addEventListener("click", writePassword);
 
 // lower upper numeric - done
 // lower upper special - done 
-// lower numeric special -- here
-// upper numeric special
+// lower numeric special -- done
+// upper numeric special - done
 
 
-// lower upper
-// lower numeric
-// lower special
-// upper numeric
-// upper special
-// numeric special
+// lower upper - done
+// lower numeric - done
+// lower special - done
+// upper numeric - done
+// upper special - done
+// numeric special - done
 
 
-// lower
-// upper
-// numeric
-// special
+// lower - done
+// upper - done
+// numeric - done
+// special - done 
