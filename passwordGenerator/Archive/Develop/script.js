@@ -8,6 +8,8 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   function generatePassword() {
+
+    document.querySelector("#password").setAttribute("style", "background: hsl(0, 0%, 100%); color:hsl(206, 17%, 28%);"); // reset the background and color to initial values
     
     // length section
       var passwordLength = 8;
@@ -55,7 +57,7 @@ function writePassword() {
         else {
           console.log('Failed instructions');
           alert('Please obey');
-          lowerPrompt();
+          lowerCase = false;
         }
       }
       lowerPrompt();
@@ -82,7 +84,7 @@ function writePassword() {
         else {
           console.log('Failed instructions');
           alert('Stop failing.');
-          upperPrompt();
+          upperCase = false;
         }
       }
       upperPrompt();
@@ -108,8 +110,8 @@ function writePassword() {
          }
          else {
            console.log('Failed instructions');
-           alert('Stop failing.');
-           numericPrompt();
+           alert('wow. fail.');
+           numeric = false;
          }
        }
        numericPrompt();  
@@ -135,8 +137,8 @@ function writePassword() {
          }
          else {
            console.log('Failed instructions');
-           alert('Stop failing.');
-           specialCharactersPrompt();
+           alert('You were not cluch. Fail.');
+           specialCharacters = false;
          }
        }
        specialCharactersPrompt(); 
@@ -311,12 +313,12 @@ function writePassword() {
 
     // combine my 4 arrays
 
-    var madeTheCut = myLowerLetterArray.concat(myUpperLetterArray);
-    console.log("made the cut " + madeTheCut);
-    madeTheCut = madeTheCut.concat(myNumericArray);
-    console.log("made the cut " + madeTheCut);
-    madeTheCut = madeTheCut.concat(mySpecialCharacterArray);
-    console.log("made the cut " + madeTheCut);
+    // var madeTheCut = myLowerLetterArray.concat(myUpperLetterArray);
+    // console.log("made the cut " + madeTheCut);
+    // madeTheCut = madeTheCut.concat(myNumericArray);
+    // console.log("made the cut " + madeTheCut);
+    // madeTheCut = madeTheCut.concat(mySpecialCharacterArray);
+    // console.log("made the cut " + madeTheCut);
 
     // If user selects all types of characters 
    
@@ -376,10 +378,10 @@ function writePassword() {
     }
   }
   }
-};
+}
     // If lower upper special are true
     
-  if (lowerCase == true && upperCase == true && specialCharacters == true) {
+  else if (lowerCase == true && upperCase == true && specialCharacters == true) {
     console.log("lower upper special are all true!");
 
 
@@ -403,11 +405,11 @@ function writePassword() {
     }
   }
   }
-};
+}
 
 // If lower numeric special are true
    
-if (lowerCase == true && numeric == true && specialCharacters == true) {
+else if (lowerCase == true && numeric == true && specialCharacters == true) {
   console.log("lower numeric special are all true!");
 
 
@@ -431,12 +433,12 @@ for(i = 0; i <= passwordLength; i++) {
       }
   }
 }
-};
+}
 
 // If upper numeric special are true
    
-if (upperCase == true && numeric == true && specialCharacters == true) {
-  console.log("they are all true!");
+else if (upperCase == true && numeric == true && specialCharacters == true) {
+  console.log("upper numeric special are true!");
 
 // iterate over each variable until the password length has been reached
 
@@ -457,11 +459,11 @@ for(i = 0; i <= passwordLength; i++) {
       }
   }
 }
-};
+}
 
 // If lower upper are true
    
-if (lowerCase == true && upperCase == true) {
+else if (lowerCase == true && upperCase == true) {
   console.log("lower upper are true!");
 
 
@@ -481,11 +483,11 @@ for(i = 0; i <= passwordLength; i++) {
           }
         }
       }
-    };
+    }
 
     // If user selects lower numeric
    
-    if (lowerCase == true && numeric == true) {
+    else if (lowerCase == true && numeric == true) {
       console.log("lower numeric are true!");
     
     
@@ -505,11 +507,11 @@ for(i = 0; i <= passwordLength; i++) {
             }
           }
         }
-      };
+      }
 
       // If user selects lower special
    
-    if (lowerCase == true && specialCharacters == true) {
+    else if (lowerCase == true && specialCharacters == true) {
       console.log("lower special are true!");
     
     
@@ -529,11 +531,11 @@ for(i = 0; i <= passwordLength; i++) {
               }
             }
           }
-        };
+        }
 
         // If user selects upper numeric
    
-            if (upperCase == true && numeric == true) {
+            else if (upperCase == true && numeric == true) {
               console.log("upper numeric are true!");
 
               // iterate over each variable until the password length has been reached
@@ -551,11 +553,11 @@ for(i = 0; i <= passwordLength; i++) {
                 }
               }
             }
-          }; // end myif
+          } // end myif
 
         // If user selects upper special
    
-        if (upperCase == true && specialCharacters == true) {
+        else if (upperCase == true && specialCharacters == true) {
           console.log("upper special are true!");
 
           // iterate over each variable until the password length has been reached
@@ -573,11 +575,11 @@ for(i = 0; i <= passwordLength; i++) {
             }
           }
         }
-      }; // end myif
+      } // end myif
 
         // If user selects numeric special
    
-        if (numeric == true && specialCharacters == true) {
+        else if (numeric == true && specialCharacters == true) {
           console.log("numeric special are true!");
 
           // iterate over each variable until the password length has been reached
@@ -595,11 +597,11 @@ for(i = 0; i <= passwordLength; i++) {
             }
           }
         }
-      }; // end myif
+      } // end myif
 
         // If user selects lower
    
-        if (lowerCase == true) {
+        else if (lowerCase == true) {
           console.log("lower is true!");
 
           // iterate over each variable until the password length has been reached
@@ -613,11 +615,11 @@ for(i = 0; i <= passwordLength; i++) {
               loopCharacterCount.push(lowerLoop);
             }
           }
-        }; // end myif
+        } // end myif
 
         // If user selects upper
    
-        if (upperCase == true) {
+        else if (upperCase == true) {
           console.log("upper is true!");
 
           // iterate over each variable until the password length has been reached
@@ -631,11 +633,11 @@ for(i = 0; i <= passwordLength; i++) {
               loopCharacterCount.push(upperLoop);
             }
           }
-        }; // end myif
+        } // end myif
 
         // If user selects numeric
    
-        if (numeric == true) {
+        else if (numeric == true) {
           console.log("numeric is true!");
 
           // iterate over each variable until the password length has been reached
@@ -650,11 +652,11 @@ for(i = 0; i <= passwordLength; i++) {
               loopCharacterCount.push(numericLoop);
             }
           }
-        }; // end myif
+        } // end myif
 
         // If user selects special
    
-        if (specialCharacters == true) {
+        else if (specialCharacters == true) {
           console.log("special is true!");
 
           // iterate over each variable until the password length has been reached
@@ -668,6 +670,14 @@ for(i = 0; i <= passwordLength; i++) {
               loopCharacterCount.push(specialLoop);
             }
           }
+        } // end myif
+
+        // If user selects no or the wrong character every time
+   
+        else {
+          console.log("they are all false!");
+          loopCharacterCount = ["Your password is very weak"]
+          document.querySelector("#password").setAttribute("style", "background:#af0808; color:white;");
         }; // end myif
 
     console.log("before fisher loop: " + loopCharacterCount);
@@ -683,49 +693,46 @@ for(i = 0; i <= passwordLength; i++) {
     shuffleArray(loopCharacterCount);
 
     console.log("after fisher loop: " + loopCharacterCount);
-   
+    
      return loopCharacterCount.join(' '); // returning the characters from the array as the password
   };
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
+  if (password !== "Your password is very weak") {
+    console.log("not a weak password");
+
+    var copyButton = document.createElement("button");
+    copyButton.textContent = "Copy to clipboard";
+    copyButton.classList.add("btn");
+    copyButton.classList.add("newBtn");
+    buttonParent = document.getElementById("card-footer");
+    console.log(buttonParent);
+    buttonParent.appendChild(copyButton); 
+    
+    var copyButtonClick = document.querySelector(".newBtn");
+    console.log(copyButtonClick);
+
+    // copy the new password to the clipboard 
+    // credit w3 tutorials
+    function copyFunction() {
+
+      var copyText = document.getElementById("password");
+
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+
+      navigator.clipboard.writeText(copyText.value);
+
+      console.log("this is the copied value: " + copyText.value);
+
+    }
+    copyButtonClick.addEventListener("click", copyFunction);
+  };
+
 };
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-//bugs
-
-// app works now but does not always include all the types of required characaters
-// need to figure out a way to get it include at least 1 of each character required
-
-// selecting no the entire time causes a typeError
-
-// stuck in loop if don't answer correctly at one point
-
-// need to test each scenerio 
-
-// solution:
-// lower upper numeric special - done
-
-// lower upper numeric - done
-// lower upper special - done 
-// lower numeric special -- done
-// upper numeric special - done
-
-
-// lower upper - done
-// lower numeric - done
-// lower special - done
-// upper numeric - done
-// upper special - done
-// numeric special - done
-
-
-// lower - done
-// upper - done
-// numeric - done
-// special - done 
