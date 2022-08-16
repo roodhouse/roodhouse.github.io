@@ -35,4 +35,36 @@ nameEl.setAttribute("style", "font-size:25px; text-align:center;");
 kittenEl.setAttribute("style", "font-size:25px; text-align:center;");
 favoriteEl.setAttribute("style", "font-size:20px;");
 
+//my notes
+// create room
+// dectorate rom
+// add on to the room
+
 // TODO: Add ordered list items containing four favorite foods
+
+li1.textContent = "apples";
+li2.textContent = "pizza";
+li3.textContent = "dumplings";
+li4.textContent = "cupcakes";
+listEl.setAttribute("style", "padding: 20px; background-color: #333;");
+li1.setAttribute("style", "color: white; padding: 5px; margin-left: 35px;");
+li2.setAttribute("style", "color: white; padding: 5px; margin-left: 35px;");
+li3.setAttribute("style", "color: white; padding: 5px; margin-left: 35px;");
+li4.setAttribute("style", "color: white; padding: 5px; margin-left: 35px;");
+listEl.appendChild(li1);
+listEl.appendChild(li2);
+listEl.appendChild(li3);
+listEl.appendChild(li4);
+
+// long way, she did after we did the above
+
+// var foods = ["lutefisk", "menudo", "haggis", "vegemite"];
+// var colors = ["red", "green", "blue", "aqua"];
+
+// listEl.setAttribute("style", "padding: 20px; background-color: #333");
+// for (var i = 0; i < foods.length; i++) {
+//   var liEl = document.createElement("li");
+//   liEl.textContent = foods[i];
+//   liEl.setAttribute("style", "color: white; padding: 5px; margin-left: 35px; background-color: " + colors[i] + ";");
+//   listEl.appendChild(liEl);
+// }
