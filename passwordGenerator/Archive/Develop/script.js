@@ -1,15 +1,24 @@
 // Assignment code here
-
+var copyButton = document.createElement("button");
+  copyButton.textContent = "Copy to clipboard";
+  copyButton.classList.add("btn");
+  copyButton.classList.add("newBtn");
+  buttonParent = document.getElementById("card-footer");
+  console.log(buttonParent);
+  buttonParent.appendChild(copyButton); 
+  copyButton.setAttribute("style", "display:none;"); // set new button as display none until needed
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+
+  document.querySelector("#password").setAttribute("style", "background: hsl(0, 0%, 100%); color:hsl(206, 17%, 28%);"); // reset the background and color to initial values
+
+
   var password = generatePassword();
   function generatePassword() {
-
-    document.querySelector("#password").setAttribute("style", "background: hsl(0, 0%, 100%); color:hsl(206, 17%, 28%);"); // reset the background and color to initial values
     
     // length section
       var passwordLength = 8;
@@ -703,14 +712,14 @@ for(i = 0; i <= passwordLength; i++) {
   if (password !== "Your password is very weak") {
     console.log("not a weak password");
 
-    var copyButton = document.createElement("button");
-    copyButton.textContent = "Copy to clipboard";
-    copyButton.classList.add("btn");
-    copyButton.classList.add("newBtn");
-    buttonParent = document.getElementById("card-footer");
-    console.log(buttonParent);
-    buttonParent.appendChild(copyButton); 
-    
+    // var copyButton = document.createElement("button");
+    // copyButton.textContent = "Copy to clipboard";
+    // copyButton.classList.add("btn");
+    // copyButton.classList.add("newBtn");
+    // buttonParent = document.getElementById("card-footer");
+    // console.log(buttonParent);
+    // buttonParent.appendChild(copyButton); 
+    copyButton.setAttribute("style", "display:inline-block;"); // set new button as display initial value
     var copyButtonClick = document.querySelector(".newBtn");
     console.log(copyButtonClick);
 
@@ -729,7 +738,7 @@ for(i = 0; i <= passwordLength; i++) {
 
     }
     copyButtonClick.addEventListener("click", copyFunction);
-  };
+  } 
 
 };
 
