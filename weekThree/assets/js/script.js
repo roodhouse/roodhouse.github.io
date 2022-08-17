@@ -24,7 +24,7 @@ function writePassword() {
       var passwordLength = 8;
       console.log(passwordLength);
       console.log(typeof passwordLength);
-      var lengthPrompt = prompt("Enter a length between 8 and 128 characters");
+      var lengthPrompt = prompt("How many characters? Enter a number b/w 8 & 128");
       if(lengthPrompt >= 8 && lengthPrompt <= 128) {
         alert('Thank you for obeying');
         console.log(lengthPrompt);
