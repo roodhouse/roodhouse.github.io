@@ -24,7 +24,7 @@ function writePassword() {
       var passwordLength = 8;
       console.log(passwordLength);
       console.log(typeof passwordLength);
-      var lengthPrompt = prompt("How many characters? Enter a number b/w 8 & 128");
+      var lengthPrompt = prompt("How many characters would you like your password? <br>Enter a number b/w 8 & 128");
       if(lengthPrompt >= 8 && lengthPrompt <= 128) {
         alert('Thank you for obeying');
         console.log(lengthPrompt);
@@ -587,8 +587,4 @@ function writePassword() {
 };
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
-// need to create site and do github stuff
-// readme explaining code 
+generateBtn.addEventListener("click", writePassword); 
