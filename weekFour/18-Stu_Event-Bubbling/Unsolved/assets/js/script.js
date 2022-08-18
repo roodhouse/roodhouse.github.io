@@ -1,8 +1,8 @@
 // TODO: Which element is the following line of code selecting?
-var carousel = document.querySelector(".carouselbox");
+var carousel = document.querySelector(".carouselbox"); // div with class of carouselbox
 // TODO: Which element is the following line of code selecting?
-var next = carousel.querySelector(".next");
-var prev = carousel.querySelector(".prev");
+var next = carousel.querySelector(".next"); // next button
+var prev = carousel.querySelector(".prev"); // previous button
 var index = 0;
 var currentImage;
 
@@ -27,24 +27,27 @@ function navigate(direction) {
 }
 
 // TODO: Describe the functionality of the following event listener.
-carousel.addEventListener("click", function() {
+carousel.addEventListener("click", function() { // onclick of the carouselbox then the function is run
   window.location.href = images[index];
 });
 
 // TODO: Describe the functionality of the following event listener.
-next.addEventListener("click", function(event) {
+next.addEventListener("click", function(event) { // onclick of the next button
   // TODO: What is the purpose of the following line of code?
-  event.stopPropagation();
+  event.stopPropagation(); // stop the bubbling up the dom so it wont show all the pictures
 
   navigate(1);
 });
 
 // TODO: Describe the functionality of the following event listener.
-prev.addEventListener("click", function(event) {
+prev.addEventListener("click", function(event) { // going back 1 image
     // TODO: What would happen if we didn't add the following line of code?
-  event.stopPropagation();
+  event.stopPropagation(); // it would go to the pictures url because of bubbling
 
   navigate(-1);
 });
 
 navigate(0);
+
+
+//event.stopPropagation()
