@@ -240,8 +240,7 @@ function writePassword() {
             specialCharactersArray.push(oneCharacter);
             console.log(specialCharactersArray);
               
-            return specialCharactersArray;
-          
+            return specialCharactersArray; 
         }
 
         var mySpecialCharacterArray = randomSpecialCharacter(); // array with all the special characters letters 
