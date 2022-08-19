@@ -1,8 +1,8 @@
-var wordBlank = document.querySelector(".word-blanks");
-var win = document.querySelector(".win");
-var lose = document.querySelector(".lose");
-var timerElement = document.querySelector(".timer-count");
-var startButton = document.querySelector(".start-button");
+var wordBlank = document.querySelector(".word-blanks"); // saves the word-blanks class
+var win = document.querySelector(".win"); // grabs the win area
+var lose = document.querySelector(".lose"); // grabs the loss area
+var timerElement = document.querySelector(".timer-count"); // grabs the timer count
+var startButton = document.querySelector(".start-button"); // grabs the start button
 
 var chosenWord = "";
 var numBlanks = 0;
