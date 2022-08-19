@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+    <title>Longhorn Quiz</title>
+</head>
+<body>
+    <!-- top bar with link to HS and the timer -->
+    <div id="topBar">
+        <!-- hight scores link -->
+        <div id="highScores">
+            <a href="#">View high scores</a>
+        </div>
+        <!-- timer div -->
+        <div id="timerDiv">
+            <p>Time: <span id="countDown">0</span></p>
+        </div>
+    </div>
+    <!-- top bar with link to HS and the timer END-->
+
+    <!-- content section -->
+    <div id="content">
+        <h1 id="questionText">Texas Longhorn Football Trivia</h1>
+        <p id="introPara">How much do you know about Texas Longhorn Football? Let's find out!</p> 
+        <p>Click the button to start. Each wrong answer will decrease the amount of time left by 10 seconds.</p>
+        <p>Your score will be the amount of time left on the clock after all questions have been answered.</p>
+        <button id="startQuiz">Start Quiz</button>
+    </div>
+</body>
+</html>
