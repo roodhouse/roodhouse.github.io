@@ -14,6 +14,10 @@ function displayMessage(type, message) {
 
 function renderLastRegistered() {
   // TODO: Retrieve the last email and password and render it to the page
+  var emailFromLs = localStorage.getItem("email");
+  var passwordFromLs = localStorage.getItem("storedPassword")
+  userEmailSpan.innerHTML = emailFromLs;
+  userPasswordSpan.innerHTML = passwordFromLs;
 }
 
 signUpButton.addEventListener("click", function(event) {
@@ -30,5 +34,12 @@ signUpButton.addEventListener("click", function(event) {
     displayMessage("success", "Registered successfully");
 
   // TODO: Save email and password to localStorage and render the last registered user
+  localStorage.setItem("email", email);
+  localStorage.setItem("storedPassword", password);
+  renderLastRegistered();
   }
-});
+}); 
+
+
+// json.stingify // to put it in key:vlue
+//json.parse // grab it out of local storage but only use hte key

@@ -10,17 +10,3 @@ myForm.onsubmit = function() {
         return true;
     }
 };
-
-var myFunction = function(x)  {
-var x = 0;
-
-if (x < 1000000) {
-    var digit = x + 1;
-    if(x <= digit){
-        digit++;
-        console.log(digit);
-        
-    }
-}
-myFunction();
-}
