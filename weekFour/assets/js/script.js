@@ -287,6 +287,8 @@ console.log(buttons);
 
 
 // how to log which answer is correct? // local storage?
+// google how to log answer of a quiz in javascript
+// research localstorage more
 // how to access timer info from outside of the time function?
 
 // assign timer function to variable, then call the variable?
