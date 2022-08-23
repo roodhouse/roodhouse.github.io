@@ -24,10 +24,18 @@
     color: var(--light);
     background-color: var(--main);
     cursor: pointer;
+    font-size: 1.8em;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
   }
 
   h1 {
     font-family: "Merriweather", "Work Sans", sans-serif;
+  }
+
+  label {
+    margin-right: 10px;
   }
 
   /* top bar: high score link and timer */
@@ -60,4 +68,10 @@
     padding: 10px;
     margin: 10px;
     border-radius: 25px;
+}
+
+#questionDiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
