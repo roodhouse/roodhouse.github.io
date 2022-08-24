@@ -2,6 +2,179 @@
 var startQuiz = document.getElementById("startQuiz"); // grab the start btn
 var iniTime = 0;
 
+var myQuestions = [
+    {
+        question: 'Who is the most winningest quarterback in Longhorn history?',
+        answers: { 
+            A: "A. Major Applewhite",
+            B: "B. Colt McCoy",
+            C: "C. Vince Young",
+            D: "D. Sam Ehlinger"
+    },
+        correctAnswer: 'B'
+    },
+    {
+        question: 'How many national Championships does UT have?',
+        answers: {
+            A: "A. 5",
+            B: "B. 1",
+            C: "C. 4",
+            D: "D. 3"
+    },
+        correctAnswer: 'C'
+    },
+    {
+        question: 'At the end of 2021, how many all time wins did the Longhorns have?',
+        answers: {
+        A: "A. 924",
+        B: "B. 899",
+        C: "C. 1011",
+        D: "D. 876"
+    },
+        correctAnswer: 'A'
+    },
+    {
+        question: 'Which of these Longhorns won the Hesiman trophy?',
+        answers: {
+        A: "A. Roy Williams",
+        B: "B. Vince Young",
+        C: "C. Earl Thomas",
+        D: "D. Ricky Williams"
+    },
+        correctAnswer: 'D'
+    },
+    {
+        question: 'How many weeks have the Longhorns been ranked #1 by the AP?',
+        answers: {
+            A: "A. 45",
+            B: "B. 87",
+            C: "C. 32",
+            D: "D. 54"
+    },
+        correctAnswer: 'A'
+    },
+    {
+        question: 'Aside from Ricky Williams, this Longhorn is the only other RB to accumlate over 5K career rushing yards.',
+        answers: {
+            A: "A. Jamaal Charles",
+            B: "B. Cedric Benson",
+            C: "C. Earl Campbell",
+            D: "D. D'Onta Foreman"
+    },
+        correctAnswer: 'B'
+    },
+    {
+        question: 'What is the name of the cannon fired at Longhorn home games?',
+        answers: {
+            A: "A. BEVO",
+            B: "B. Big Bertha",
+            C: "C. Smokey",
+            D: "D. DKR"
+    },
+        correctAnswer: 'C'
+    },
+    {
+        question: 'What is the name of the song sung at the end of every Longhorn home game?',
+        answers: {
+            A: "A. Deep in the Heart of Texas",
+            B: "B. Texas Fight!",
+            C: "C. The National Anthem",
+            D: "D. The Eyes of Texas"
+    },
+        correctAnswer: 'D'
+    },
+    {
+        question: 'During his tenure at Texas, how many 10+ win season in a row did Mack Brown have?',
+        answers: {
+            A: "A. 9",
+            B: "B. 11",
+            C: "C. 5",
+            D: "D. 2"
+    },
+        correctAnswer: 'A'
+    },
+    {
+        question: 'Before 2011, Texas had beaten this team more than any other team.',
+        answers: {
+            A: "A. Texas A&M",
+            B: "B. Baylor",
+            C: "C. Okalahoma",
+            D: "D. Texas Tech"
+    },
+        correctAnswer: 'A'
+    },
+    {
+        question: 'Texas has played and never beaten this team.',
+        answers: {
+            A: "A. Virginia Tech",
+            B: "B. Syracuse",
+            C: "C. Air Force",
+            D: "D. all of the above"
+    },
+        correctAnswer: 'D'
+    },
+    {
+        question: 'What color jersey do the Longhonrs wear for home games?',
+        answers: {
+            A: "A. Burnt Orange",
+            B: "B. Black",
+            C: "C. Yellow",
+            D: "D. Maroon"
+    },
+        correctAnswer: 'A'
+    },
+    {
+        question: 'In 2017 after an overtime win against Texas, Oklahoma State head coach Mike Gundy said that this player almost beat them by himself.',
+        answers: {
+            A: "A. Sam Ehlinger",
+            B: "B. Brandon Jones",
+            C: "C. Breckyn Hager",
+            D: "D. Michael Dickson"
+    },
+        correctAnswer: 'D'
+    },
+    {
+        question: 'This Longhorn QB joins Colt McCoy as the only other Texas QB to thrown for 6 touchdowns in one game.',
+        answers: {
+            A: "A. Chris Simms",
+            B: "B. James Brown",
+            C: "C. Vince Young",
+            D: "D. Casey Thompson"
+    },
+        correctAnswer: 'D'
+    },
+    {
+        question: 'This Longhorn ranks 3rd all time in career receptions at Texas.',
+        answers: {
+            A: "A. Jordan Shipley",
+            B: "B. Roy Williams",
+            C: "C. Jaxon Shipley",
+            D: "D. Quan Cosby"
+    },
+        correctAnswer: 'C'
+    },
+    {
+        question: 'With 527 total yards, which Longhorn holds the single game total yards record?',
+        answers: {
+            A: "A. Jerrod Heard",
+            B: "B. Vince Young",
+            C: "C. Sam Ehlinger",
+            D: "D. Colt McCoy"
+    },
+        correctAnswer: 'A'
+    },
+    {
+        question: 'Which Longhorn is the career leader in field goals made?',
+        answers: {
+            A: "A. Cameron Dicker",
+            B: "B. Phil Dawson",
+            C: "C. Justin Tucker",
+            D: "D. Dusty Mangum"
+    },
+        correctAnswer: 'A'
+    }
+]
+
 // timer function
 startQuiz.addEventListener("click", function(){ // timer function that fires on start quiz button click
     console.log("yes!");
@@ -26,15 +199,20 @@ startQuiz.addEventListener("click", function(){ // timer function that fires on 
 
 }); // add click event listener to button 
 
-
-// Quiz function
-startQuiz.addEventListener("click", function(){
-
-    // console.log("quiz console log: " + document.getElementById("countDown").innerHTML);
-    // setting up initial variables
-    var questionText = document.getElementById("questionText");
+function myQuiz() {
+     // setting up initial variables
+     // // setting up initial variables
     var paraText     = document.getElementsByClassName("para");
     var startBtn     = document.getElementById("startQuiz");
+    
+    // removing items from the dom
+    
+    paraText[0].setAttribute("Style", "display: none;"); // how to setAttribute on all in array with one line?
+    paraText[1].setAttribute("Style", "display: none;"); // how to setAttribute on all in array with one line?
+    paraText[2].setAttribute("Style", "display: none;"); // how to setAttribute on all in array with one line?
+    startBtn.setAttribute("Style", "display: none;");
+
+    var questionText = document.getElementById("questionText");
     var content      = document.getElementById("content");
     var questionDiv  = document.createElement("div");
     var choiceA      = document.createElement("button");
@@ -53,181 +231,84 @@ startQuiz.addEventListener("click", function(){
     questionDiv.appendChild(choiceD);
 
     content.appendChild(questionDiv);
-    
-    // removing items from the dom
-    paraText[0].setAttribute("Style", "display: none;"); // how to setAttribute on all in array with one line?
-    paraText[1].setAttribute("Style", "display: none;"); // how to setAttribute on all in array with one line?
-    paraText[2].setAttribute("Style", "display: none;"); // how to setAttribute on all in array with one line?
-    startBtn.setAttribute("Style", "display: none;");
 
-    // inserting new content into the dom
-    // question array (an arrray of my question blocks will go here)
+    var randomQuestion = myQuestions[Math.floor(Math.random() * myQuestions.length)]; // gives one question 
+    console.log(randomQuestion)
 
-    var questionOne = {
-        question: 'Who is the most winningest quarterback in Longhorn history?',
-        choiceA: "A. Major Applewhite",
-        choiceB: "B. Colt McCoy",
-        choiceC: "C. Vince Young",
-        choiceD: "D. Sam Ehlinger"
-        }
-    
-    var questionTwo = {
-        question: 'How many national Championships does UT have?',
-        choiceA: "A. 5",
-        choiceB: "B. 1",
-        choiceC: "C. 4",
-        choiceD: "D. 3"
-        }
-
-    var questionThree = {
-        question: 'At the end of 2021, how many all time wins did the Longhorns have?',
-        choiceA: "A. 924",
-        choiceB: "B. 899",
-        choiceC: "C. 1011",
-        choiceD: "D. 876"
-        }
-    
-    var questionFour = {
-        question: 'Which of these Longhorns won the Hesiman trophy?',
-        choiceA: "A. Roy Williams",
-        choiceB: "B. Vince Young",
-        choiceC: "C. Earl Thomas",
-        choiceD: "D. Ricky Williams"
-        }
-
-    var questionFive = {
-        question: 'How many weeks have the Longhorns been ranked #1 by the AP?',
-        choiceA: "A. 45",
-        choiceB: "B. 87",
-        choiceC: "C. 32",
-        choiceD: "D. 54"
-        }
-    
-    var questionSix = {
-        question: 'Aside from Ricky Williams, this Longhorn is the only other RB to accumlate over 5K career rushing yards.',
-        choiceA: "A. Jamaal Charles",
-        choiceB: "B. Cedric Benson",
-        choiceC: "C. Earl Campbell",
-        choiceD: "D. D'Onta Foreman"
-        }
-
-    var questionSeven = {
-        question: 'What is the name of the cannon fired at Longhorn home games?',
-        choiceA: "A. BEVO",
-        choiceB: "B. Big Bertha",
-        choiceC: "C. Smokey",
-        choiceD: "D. DKR"
-        }
-    
-    var questionEight = {
-        question: 'What is the name of the song sung at the end of every Longhorn home game?',
-        choiceA: "A. Deep in the Heart of Texas",
-        choiceB: "B. Texas Fight!",
-        choiceC: "C. The National Anthem",
-        choiceD: "D. The Eyes of Texas"
-        }
-
-    var questionNine = {
-        question: 'During his tenure at Texas, how many 10+ win season in a row did Mack Brown have?',
-        choiceA: "A. 9",
-        choiceB: "B. 11",
-        choiceC: "C. 5",
-        choiceD: "D. 2"
-        }
-    
-    var questionTen = {
-        question: 'Before 2011, Texas had beaten this team more than any other team.',
-        choiceA: "A. Texas A&M",
-        choiceB: "B. Baylor",
-        choiceC: "C. Okalahoma",
-        choiceD: "D. Texas Tech"
-        }
-    
-    var questionEleven = {
-        question: 'Texas has played and never beaten this team.',
-        choiceA: "A. Virginia Tech",
-        choiceB: "B. Syracuse",
-        choiceC: "C. Air Force",
-        choiceD: "D. all of the above"
-        }
-    
-    var questionTweleve = {
-        question: 'What color jersey do the Longhonrs wear for home games?',
-        choiceA: "A. Burnt Orange",
-        choiceB: "B. Black",
-        choiceC: "C. Yellow",
-        choiceD: "D. Maroon"
-        }
-
-    var questionThirteen = {
-        question: 'In 2017 after an overtime win against Texas, Oklahoma State head coach Mike Gundy said that this player almost beat them by himself.',
-        choiceA: "A. Sam Ehlinger",
-        choiceB: "B. Brandon Jones",
-        choiceC: "C. Breckyn Hager",
-        choiceD: "D. Michael Dickson"
-        }
-    
-    var questionFourteen = {
-        question: 'This Longhorn QB joins Colt McCoy as the only other Texas QB to thrown for 6 touchdowns in one game.',
-        choiceA: "A. Chris Simms",
-        choiceB: "B. James Brown",
-        choiceC: "C. Vince Young",
-        choiceD: "D. Casey Thompson"
-        }
-
-    var questionFifteen = {
-        question: 'This Longhorn ranks 3rd all time in career receptions at Texas.',
-        choiceA: "A. Jordan Shipley",
-        choiceB: "B. Roy Williams",
-        choiceC: "C. Jaxon Shipley",
-        choiceD: "D. Quan Cosby"
-        }
-    
-    var questionSixteen = {
-        question: 'With 527 total yards, which Longhorn holds the single game total yards record?',
-        choiceA: "A. Jerrod Heard",
-        choiceB: "B. Vince Young",
-        choiceC: "C. Sam Ehlinger",
-        choiceD: "D. Colt McCoy"
-        }
-
-    var questionSeventeen = {
-        question: 'Which Longhorn is the career leader in field goals made?',
-        choiceA: "A. Cameron Dicker",
-        choiceB: "B. Phil Dawson",
-        choiceC: "C. Jeff Ward",
-        choiceD: "D. Dusty Mangum"
-        }
-    
-
-    questionText.textContent = questionOne.question;
-    choiceA.textContent = questionOne.choiceA;
-    choiceB.textContent = questionOne.choiceB;
-    choiceC.textContent = questionOne.choiceC;
-    choiceD.textContent = questionOne.choiceD;
-
-    var questionArray = [questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, questionEight, questionNine, questionTen, questionEleven, questionTweleve, questionThirteen, questionFourteen, questionFifteen, questionSixteen, questionSeventeen]
-
-    function nextQuestion() {
-
-    var randomQuestion = questionArray[Math.floor(Math.random() * questionArray.length)]; // gives one question 
-    // console.log(randomQuestion.choiceA); // show the question
-    var start = questionArray.indexOf(randomQuestion); // finds the index of the random question
+    var start = myQuestions.indexOf(randomQuestion); // finds the index of the random question
     var deleteCount = 1; // the amount of entries to delete
-    questionArray.splice(start, deleteCount); // remove the random question from the question array so that it does not appear again during the quiz
-    console.log(questionArray); // show the new questionArray without the random question
+    myQuestions.splice(start, deleteCount); // remove the random question from the question array so that it does not appear again during the quiz
+   
+    console.log(myQuestions[0].answers.A);
+
+    
+    console.log(myQuestions); // show the new questionArray without the random question
     console.log(randomQuestion);
 
     questionText.textContent = randomQuestion.question;
-    choiceA.textContent = randomQuestion.choiceA;
-    choiceB.textContent = randomQuestion.choiceB;
-    choiceC.textContent = randomQuestion.choiceC;
-    choiceD.textContent = randomQuestion.choiceD;
+    choiceA.textContent = randomQuestion.answers.A;
+    choiceB.textContent = randomQuestion.answers.B;
+    choiceC.textContent = randomQuestion.answers.C;
+    choiceD.textContent = randomQuestion.answers.D;
 
-}
+    // first question
+    choiceA.addEventListener("click", function(){  
+        console.log("good job choice a");
+        questionText.textContent = "";
+        choiceA.setAttribute("style", "display:none;");
+        choiceB.setAttribute("style", "display:none;");
+        choiceC.setAttribute("style", "display:none;");
+        choiceD.setAttribute("style", "display:none;");
 
-    // need to re-traverse the dom here.... then I can do other click listeners and if statements based on those 
-    choiceA = document.getElementById("choiceA");
+        if (myQuestions.length === 0) {
+            endGame();
+        } else {
+            myQuiz();
+    }
+
+    });
+
+    choiceB.addEventListener("click", function(){  
+        console.log("good job choice b");
+        questionText.textContent = "";
+        choiceA.setAttribute("style", "display:none;");
+        choiceB.setAttribute("style", "display:none;");
+        choiceC.setAttribute("style", "display:none;");
+        choiceD.setAttribute("style", "display:none;");
+        if (myQuestions.length === 0) {
+            endGame();
+        } else {
+        myQuiz();
+    }
+    });
+
+    choiceC.addEventListener("click", function(){    
+        console.log("good job choice c");
+        questionText.textContent = "";
+        choiceA.setAttribute("style", "display:none;");
+        choiceB.setAttribute("style", "display:none;");
+        choiceC.setAttribute("style", "display:none;");
+        choiceD.setAttribute("style", "display:none;");
+        if (myQuestions.length === 0) {
+            endGame();
+        } else {
+        myQuiz();
+    }
+    });
+
+    choiceD.addEventListener("click", function(){  
+        console.log("good job choice d");
+        questionText.textContent = "";
+        choiceA.setAttribute("style", "display:none;");
+        choiceB.setAttribute("style", "display:none;");
+        choiceC.setAttribute("style", "display:none;");
+        choiceD.setAttribute("style", "display:none;");
+        if (myQuestions.length === 0) {
+            endGame();
+        } else {
+        myQuiz();
+    }
+    });
 
     function endGame() {
         questionText.textContent = 'All done';
@@ -240,55 +321,25 @@ startQuiz.addEventListener("click", function(){
             choiceC.setAttribute("Style", "display:none;");
             choiceD.setAttribute("Style", "display:none;");
     }
-        
-    // first question
-    choiceA.addEventListener("click", function(){  
-        console.log("good job choice a");
-        if (questionArray.length === 0) {
-            endGame();
-        } else {
-        nextQuestion();
-    }
-
-    });
-
-    choiceB.addEventListener("click", function(){  
-        console.log("good job choice b");
-        if (questionArray.length === 0) {
-            endGame();
-        } else {
-        nextQuestion();
-    }
-    });
-
-    choiceC.addEventListener("click", function(){    
-        console.log("good job choice c");
-        if (questionArray.length === 0) {
-            endGame();
-        } else {
-        nextQuestion();
-    }
-    });
-
-    choiceD.addEventListener("click", function(){  
-        console.log("good job choice d");
-        if (questionArray.length === 0) {
-            endGame();
-        } else {
-        nextQuestion();
-    }
-    });
-
-
+}
+// Quiz function
+startQuiz.addEventListener("click", function(){
+    myQuiz();
 });
 
+    // need to re-traverse the dom here.... then I can do other click listeners and if statements based on those 
+    // choiceA = document.getElementById("choiceA");
+
+    
+    
 var buttons = document.getElementsByTagName('button')
 console.log(buttons);
 
 
 // how to log which answer is correct? // local storage?
-// google how to log answer of a quiz in javascript
-// research localstorage more
-// how to access timer info from outside of the time function?
 
-// assign timer function to variable, then call the variable?
+
+// the last question causes an error and does not bring up the all done screen even though length is === 0
+
+// watch video tutorial on creating a quiz
+// look at mini project walk through
