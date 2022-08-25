@@ -1,4 +1,4 @@
-# Week 3 / Module 3 Challenge
+# Week 4 / Module 4 Challenge
 
 ## Description 
 
@@ -11,4 +11,4 @@ Created a quiz. Quiz is not a finished product yet.
 ###### Website
 ![SS of the site](https://roodhouse.github.io/weekFour/assets/images/ss01.png)
 
-![SS of the site](https://roodhouse.github.io/weekFour/assets/images/ss02.png)
+![SS of the site](https://roodhouse.github.io/weekFourg/assets/images/ss02.png)
