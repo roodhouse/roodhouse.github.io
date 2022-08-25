@@ -48,3 +48,12 @@
   background-color: var(--teal);
   color: var(--lightteal);
 }
+
+body {
+  font-family: Merriweather;
+}
+
+h1, p, .custom-btn {
+  font-family: Silkscreen;
+}
+

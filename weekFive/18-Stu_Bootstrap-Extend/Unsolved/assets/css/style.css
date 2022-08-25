@@ -4,7 +4,24 @@
   --teal: #71a8a7;
   --lightteal: #d5f5f5;
   --light: #fffaf7;
+  
 }
 
 /* Add your custom class style definitions here */
 /* HINT: Apply CSS variables using `var(--brown)` syntax as your property value */
+
+.customNav {
+  background-color: rgb(5, 4, 4);
+}
+
+.customNav a:hover {
+  color: white;
+}
+
+.custom-jumbotron {
+  background-color: tomato;
+}
+
+.custom-btn {
+  background-color: purple;
+}
