@@ -1,0 +1,20 @@
+Simple Promise Chain:
+
+  var test = function(data) {
+    return new Promise((resolve, reject) => {
+      resolve(data);
+    })
+  }
+
+  test(1234)
+  .then(function(data) {
+    console.log(data);
+    return test('test');
+  })
+  .then(function(data) {
+    console.log(data);
+    return test(5);
+  })
+  .then(function(data) {
+    console.log(data);
+  })
