@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://kit.fontawesome.com/f41dad263a.js" crossorigin="anonymous"></script>
+	<title>musicMap.</title>
+</head>
+
+<body>
+    <header class="has-text-light">
+        <h1 class="is-size-1">Music Map</h1>
+    </header>
+	
+    <!-- left column -->
+    <div id="leftConatiner" class="has-background-light pt-6 pb-3">
+
+        <div id="searchConatiner" class="container mb-6">
+            <form id="searchForm" class="is-flex is-justify-content-center is-flex-wrap-wrap">
+                <input type="text" class="mb-4 mx-4 pl-2 py-2" id="userInput" placeholder="Enter a city to search for a live show">
+                <input id="newButton" class="has-text-light px-6 py-1" type="button" value="Search">
+            </form>
+        </div>
+
+        <div id="favContainer" class="container">
+            <h3 class="is-size-3">Favorites</h3>
+
+            <ul id="quickList">
+                <li id="ql-0"></li>
+                <li id="ql-1"></li>
+                <li id="ql-2"></li>
+                <li id="ql-3"></li>
+                <li id="ql-4"></li>
+                <li id="ql-5"></li>
+                <li id="ql-6"></li>
+                <li id="ql-7"></li>
+                <li id="ql-8"></li>
+                <li id="ql-9"></li>
+            </ul>
+        </div>
+
+    </div>
+
+	
+    <!-- middle column -->
+    <div id="resultsPane" class="container pt-3">
+		<h3 id="resultCity" class="is-size-3 pb-4"></h3>
+
+        <div id="resultRow" class="columns container is-flex is-flex-wrap-wrap"></div>
+        
+	</div>
+
+   <!-- right column -->
+    <div id="mapPane">
+        <div class="pt-3 has-background-light">
+                <h3 class="is-size-3 pb-4">Find your show</h3>
+        </div>
+            <div id="map"></div>
+    </div>
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqbfZP0fXb-G54Gdlvy0lbaSyvRbCp8gk&callback=initMap&v=weekly"
+		defer>
+	</script>
+
+	<!-- JS script -->
+	<script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
+	<script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
