@@ -106,9 +106,9 @@
     border-radius: 20px;
   }
   
-  label {
-    display: inline-block;
-    width: 20%;
+  .contactForm {
+    display: block;
+    color: white;
   }
     
   input, 
