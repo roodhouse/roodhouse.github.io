@@ -1,6 +1,7 @@
 import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import {Link} from 'react-scroll'
+import Me from '../assets/me.jpg'
 
 function Home() {
   return (
@@ -9,6 +10,8 @@ function Home() {
         {/* container */}
 
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+          <div className='flex flex-row justify-center'>
+            <div>
             <p className='text-[#FF5757]'>Hi, my name is</p>
             <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>John Rugh</h1>
             <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>I'm a Web Developer.</h2>
@@ -22,6 +25,12 @@ function Home() {
                   </button>
                 </Link>
             </div>
+            </div>
+            <div className='ml-[5%] w-[100%] h-[100%] md:h-[75%]'>
+            <img className='md:h-[100%]' src={Me} alt="John Rugh" />
+            </div>
+          </div>
+            
         </div>
     </div>
   )
