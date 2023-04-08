@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "bootstrap": "^5.2.1",
-    "inquirer": "^9.1.2",
-    "jquery": "^3.6.1"
-  }
-}
