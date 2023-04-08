@@ -24,10 +24,10 @@ function Work() {
                             Bucket List Blog
                         </span>
                         <div className='pt-8 text-center'>
-                            <a href="/">
+                            <a href="https://bucket-list-blog.herokuapp.com/" target='_blank'>
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="https://github.com/roodhouse/project2-CRUD-Happens" target='_blank'>
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
                             </a>
                         </div>
@@ -41,11 +41,8 @@ function Work() {
                             Color Wheel
                         </span>
                         <div className='pt-8 text-center'>
-                            <a href="/">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
-                            </a>
-                            <a href="/">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                            <a href="https://www.rughdesign.com/color-wheel/" target='_blank'>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Visit Site</button>
                             </a>
                         </div>
                     </div>
@@ -58,11 +55,8 @@ function Work() {
                             eBook Landing Page
                         </span>
                         <div className='pt-8 text-center'>
-                            <a href="/">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
-                            </a>
-                            <a href="/">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                            <a href="https://www.rughdesign.com/own-your-space/" target='_blank'>
+                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Visit Site</button>
                             </a>
                         </div>
                     </div>
@@ -75,10 +69,10 @@ function Work() {
                             Re:View
                         </span>
                         <div className='pt-8 text-center'>
-                            <a href="/">
+                            <a href="https://review-binary-beast.herokuapp.com/" target='_blank'>
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
                             </a>
-                            <a href="/">
+                            <a href="https://github.com/roodhouse/UPIN" target='_blank'>
                                 <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
                             </a>
                         </div>
